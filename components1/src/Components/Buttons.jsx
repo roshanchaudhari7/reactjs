@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Buttons = () => {
+const Buttons = (props) => {
+  const{text, color} = props
+  let styles = {
+    backgroundColor : color
+  }
   return (
-    <button>Click Me</button>
+    <button style={styles}>{text}</button>
   )
 }
 
