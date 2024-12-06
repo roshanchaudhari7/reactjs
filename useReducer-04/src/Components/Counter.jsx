@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react'
-
+// useReducer
 function reducerFunction(state, action) {
     if (action.type == "increment") {
         return {count : state.count + 1}
@@ -10,7 +10,9 @@ function reducerFunction(state, action) {
         return {count : 0}
     }
 }
+
 const Counter = () => {
+    // const [state, dispatch] = useReducer(reducer, initialArg, init?)
     const[state, dispatch] = useReducer(reducerFunction, {count : 0})
     return (
         <div>
