@@ -7,11 +7,11 @@ const initialState = {
 const dataReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'DATA_LOADING':
-            return { ...state, loading: true, data: null, error: null }
+            return { ...state, loading: true, error: null }
         case 'DATA_SUCCESS':
-            return { ...state, loading: false, data: action.payload, error: null }
+            return { ...state, loading: false, data: action.payload }
         case 'DATA_ERROR':
-            return { ...state, loading: false, data: null, error: action.payload }
+            return { ...state, loading: false, error: action.payload }
         default:
             return state;
     }

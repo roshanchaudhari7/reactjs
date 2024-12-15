@@ -20,9 +20,11 @@ const Data = () => {
     return (
         <div>
             {
-                data.map(item => {
-                    return <img style={{width: '100px'}} src={item.download_url} alt="" key={item.id} />
-                })
+                data.map(item => (
+                    <li key={item.id}>
+                        <img style={{width: '200px', height: '120px'}} src={item.download_url} alt="images" />
+                    </li>
+                ))
             }
         </div>
     )
